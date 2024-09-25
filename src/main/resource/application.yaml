@@ -1,0 +1,30 @@
+exchange-usd-rate-api-url: https://api.nbp.pl/api/exchangerates/rates/a/usd
+
+server:
+  port: '8080'
+
+spring:
+  datasource:
+    url: jdbc:h2:~/test
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+  application:
+    name: cinkciarz
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+      dialect:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level:
+    root: INFO
